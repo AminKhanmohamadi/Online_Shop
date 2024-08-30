@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Sign Up">
-</form>
-</body>
-</html>
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+	Log in
+{% endblock %}
+
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Sign Up">
+    </form>
+{% endblock %}
