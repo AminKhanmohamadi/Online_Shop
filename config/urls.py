@@ -14,6 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from sys import path_hooks
+
 from django.contrib import admin
 from django.urls import path , include
 
@@ -22,4 +24,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('accounts/', include('allauth.urls')),
     path('products/', include('products.urls')),
+
+    #     rosetta
+    path('rosetta/', include('rosetta.urls')),
 ]
