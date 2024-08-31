@@ -1,5 +1,5 @@
 {% extends '_base.html' %}
-
+{% load i18n %}
 
 {% block title %}
 	Log out
@@ -7,11 +7,13 @@
 
 
 {% block content %}
-    <h1>Log Out</h1>
-    <p>are you sure?</p>
+    <div class="container card shadow p-5 mb--200">
+    <h1>{% trans 'Log Out' %}</h1>
+    <p>{% translate 'Are you sure?' %}</p>
     <form action="" method="post">
         {% csrf_token %}
-        
-        <input type="submit" value="Log out">
+
+        <input type="submit" class="btn-submit" value="{% trans 'Log out' %}">
     </form>
+    </div>
 {% endblock %}

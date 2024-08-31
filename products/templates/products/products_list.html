@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid shop-products">
+                <div class="container shop-products">
                     <div class="row">
                         <div class="col-12">
                             <div class="tab-content" id="product-tab-content">
@@ -97,11 +97,16 @@
                             </div>
                             <nav class="pagination-wrap mt--35 mt-md--25 pb-5">
                                 <ul class="pagination">
-                                    <li><a href="#" class="next page-number"><i class="fa fa-angle-double-right"></i></a></li>
-                                    <li><span class="current page-number">1</span></li>
-                                    <li><a href="#" class="page-number">2</a></li>
-                                    <li><a href="#" class="page-number">3</a></li>
-                                    <li><a href="#" class="prev page-number"><i class="fa fa-angle-double-left"></i></a></li>
+                                {% if page_obj.has_previous %}
+                                        <li><a href="?page={{ page_obj.previous_page_number }}" class="prev page-number"><i class="fa fa-angle-double-right"></i></a></li>
+                                    {% endif %}
+                                   
+                                    <li><span class="current page-number">{{ page_obj.number }}</span></li>
+                                    
+                                     {% if page_obj.has_next %}
+                                        <li><a href="?page={{ page_obj.next_page_number }}" class="next page-number"><i class="fa fa-angle-double-left"></i></a></li>
+                                    {% endif %}
+
                                 </ul>
                             </nav>
                         </div>
