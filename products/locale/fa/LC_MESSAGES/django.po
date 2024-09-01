@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-31 20:19+0330\n"
+"POT-Creation-Date: 2024-08-31 21:14+0330\n"
 "PO-Revision-Date: 2024-08-31 20:14+0330\n"
 "Last-Translator:   <aminkhm097@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,6 +110,6 @@ msgstr "نظر خود را بنویسید"
 msgid "submit"
 msgstr "ارسال"
 
-#: .\products\views.py:50
+#: .\products\views.py:51
 msgid "Your comment has been added."
 msgstr "نظر شما با موفقیت ثبت شد."
