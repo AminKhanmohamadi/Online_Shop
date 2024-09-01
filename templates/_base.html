@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!doctype html>
 <html  class="no-js"><!--------Theme Shered by Codingyar.com--------->
 
@@ -88,41 +89,43 @@
                                     <i class="flaticon flaticon-like"></i>
                                 </a>
                             </li>
-                            
-                             <li class="header-toolbar__item mini-cart-item">
+
+                            <li class="header-toolbar__item mini-cart-item">
                                 <a href="#miniCart" class="header-toolbar__btn toolbar-btn mini-cart-btn">
                                     <i class="flaticon flaticon-shopping-cart"></i>
                                     <sup class="mini-cart-count">2</sup>
                                 </a>
                             </li>
-                            {% if user.is_authenticated %}
-                                <li class="header-toolbar__item user-info">
+
+                            <li class="header-toolbar__item user-info">
                                 <a href="my-account.html" class="header-toolbar__btn">
                                     <i class="flaticon flaticon-user"></i>
                                 </a>
                                 <ul class="user-info-menu">
-                                    <li>
-                                        <a class="text-right" href="my-account.html">حساب کاربری</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-right" href="cart.html">سبد خرید</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
-                                    </li>
-                                    <li>
-                                        <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
-                                    </li>
+                                    {% if user.is_authenticated %}
+                                        <li>
+                                            <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-right" href="{% url 'account_logout' %}">{% translate 'Logout' %}</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
+                                        </li>
+                                    {% else %}
+                                        <li>
+                                            <a class="text-right" href="{% url 'account_login' %}">{% trans 'Login' %} </a>
+                                        </li>
+                                        <li>
+                                            <a class="text-right" href="{% url 'account_signup' %}">{% trans 'Signup' %} </a>
+                                        </li>
+                                    {% endif %}
                                 </ul>
                             </li>
-                                {% else %}
-                                <li class="header-toolbar__item user-info">
-                                <a href="{% url 'account_login' %}" class="header-toolbar__btn">
-                                    <i class="flaticon flaticon-user"></i>
-                                </a>
-                            </li>
-                            {% endif %} 
-                            
+
                             <li class="header-toolbar__item">
                                 <a href="#searchForm" class="header-toolbar__btn toolbar-btn">
                                     <i class="flaticon flaticon-search"></i>
@@ -154,31 +157,31 @@
     <!-- Main Content Wrapper Start -->
 
     <!-- Footer Start-->
-    <footer class="footer">
-        <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-9 text-center">
-                        <div class="footer-widget mb--50">
-                            <div class="textwidget">
-                                <img src="{% static 'assets/img/codingyar_logo.png' %}" alt="Logo">
-                            </div>
-                        </div>
-                        <div class="footer-widget mb--50 pb--1">
-                            <ul class="footer-menu">
-                                <li><a href="">درباره ما</a></li>
-                                <li><a href="">قوانین و مقررات</a></li>
-                                <li><a href="">تماس با ما</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            Codingyar.com © | all rights reserved
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+{#    <footer class="footer">#}
+{#        <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">#}
+{#            <div class="container">#}
+{#                <div class="row justify-content-center">#}
+{#                    <div class="col-lg-9 text-center">#}
+{#                        <div class="footer-widget mb--50">#}
+{#                            <div class="textwidget">#}
+{#                                <img src="{% static 'assets/img/codingyar_logo.png' %}" alt="Logo">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="footer-widget mb--50 pb--1">#}
+{#                            <ul class="footer-menu">#}
+{#                                <li><a href="">درباره ما</a></li>#}
+{#                                <li><a href="">قوانین و مقررات</a></li>#}
+{#                                <li><a href="">تماس با ما</a></li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                        <div class="footer-widget">#}
+{#                            Codingyar.com © | all rights reserved#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </footer>#}
     <!-- Footer End-->
 
     <!-- Search form Popup Start -->

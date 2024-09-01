@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     'allauth',
     'allauth.account',
+    'django_humanize',
 
     # local
     'accounts.apps.AccountsConfig',
@@ -176,8 +177,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # accounts config
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'product-list'
+LOGOUT_REDIRECT_URL = 'product-list'
 
 # all auth settings
 ACCOUNT_SESSION_REMEMBER = True

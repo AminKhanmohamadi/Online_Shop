@@ -1,12 +1,11 @@
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404, render
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import ListView, DetailView, CreateView
 
-from django.contrib import messages
 from products.forms import CommentForm
-from products.models import Product , Comment
-
-from django.utils.translation import gettext_lazy as _
+from products.models import Product, Comment
 
 
 # Create your views here.
@@ -22,7 +21,7 @@ class ProductListView(ListView):
     queryset = Product.objects.filter(active=True)
     template_name = 'products/products_list.html'
     context_object_name = 'products'
-    paginate_by = 1
+    paginate_by = 4
 
 
 
@@ -34,6 +33,7 @@ class ProductDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comment_form'] = CommentForm()
+
         return context
 
 
