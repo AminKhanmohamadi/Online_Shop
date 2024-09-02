@@ -9,7 +9,7 @@ class Product(models.Model):
     description = models.TextField(verbose_name=_('Description'))
     price = models.PositiveIntegerField(default=0 , verbose_name=_('Price'))
     active = models.BooleanField(default=True , verbose_name=_('Active'))
-
+    image  = models.ImageField(upload_to='products/product_cover', verbose_name=_('Image') , blank=True)
 
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
