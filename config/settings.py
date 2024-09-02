@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     'allauth',
     'allauth.account',
-    'django_humanize',
+
 
     # local
     'persian_translate.apps.PersianTranslateConfig',
