@@ -81,6 +81,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #     Custom Context Processors
+                'cart.context_processors.cart',
 
             ],
         },
@@ -178,7 +180,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'product-list'
-LOGOUT_REDIRECT_URL = 'product-list'
+LOGOUT_REDIRECT_URL = 'product-listT'
 
 # all auth settings
 ACCOUNT_SESSION_REMEMBER = True
