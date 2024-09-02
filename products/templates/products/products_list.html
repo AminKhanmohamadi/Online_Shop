@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
-{% load humanizelib %}
+{% load humanize %}
+{% load persian_translation_tags %}
+{% load i18n %}
 {% block title %}
     Product List
 {% endblock %}
@@ -15,7 +17,7 @@
                             <div class="container-fluid row align-items-center">
                                 <div class="col-lg-12 mb-md--50 mb-xs--10">
                                     <div class="shop-toolbar__left d-flex align-items-sm-center align-items-start flex-sm-row flex-column">
-                                        <p class="product-pages">نمایش ۱-6 از {{ products.count }}</p>
+                                        <p class="product-pages">نمایش ۱-۶ از {{ products.count|translate_number }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -54,10 +56,10 @@
                                                             <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
                                                         </h3>
                                                         <div class="product-price-wrapper mb--30">
-                                                            <span class="money text-success">{{ product.price|intcomma }} تومان</span>
+                                                            <span class="money text-success">{{ product.price|intcomma:False|translate_number }} {% translate 'toman' %}</span>
                                                             {#                                                            <span class="money-separator">-</span>#}
                                                             {#                                                            <span class="old-price text-danger">#}
-                                                            {#                                                                <span class="money text-danger">۸۰,۰۰۰ تومان</span>#}
+                                                            {#                                                                <span class="money text-danger">۸۰,۰۰۰ {% trans 'toman' %}</span>#}
                                                             {#                                                            </span>#}
                                                         </div>
                                                         <a href="cart.html" class="btn btn-small btn-bg-sand btn-color-dark px-3">اضافه کردن به سبد خرید</a>
@@ -88,7 +90,7 @@
                                     {#                                                            <a href="product-details.html">کلاه زمستانی طرف برف</a>#}
                                     {#                                                        </h3>#}
                                     {#                                                        <div class="product-price-wrapper mb--30">#}
-                                    {#                                                            <span class="money">۱۳۸,۰۰۰ تومان</span>#}
+                                    {#                                                            <span class="money">۱۳۸,۰۰۰ {% trans 'toman' %}</span>#}
                                     {#                                                        </div>#}
                                     {#                                                        <a href="cart.html" class="btn btn-small btn-bg-sand btn-color-dark px-3">اضافه کردن به سبد خرید</a>#}
                                     {#                                                    </div>#}
@@ -101,13 +103,13 @@
                         <nav class="pagination-wrap mt--35 mt-md--25 pb-5">
                             <ul class="pagination">
                                 {% if page_obj.has_previous %}
-                                    <li><a href="?page={{ page_obj.previous_page_number }}" class="prev page-number"><i class="fa fa-angle-double-right"></i></a></li>
+                                    <li><a href="?page={{ page_obj.previous_page_number|translate_number }}" class="prev page-number"><i class="fa fa-angle-double-right"></i></a></li>
                                 {% endif %}
 
-                                <li><span class="current page-number">{{ page_obj.number }}</span></li>
+                                <li><span class="current page-number">{{ page_obj.number|translate_number }}</span></li>
 
                                 {% if page_obj.has_next %}
-                                    <li><a href="?page={{ page_obj.next_page_number }}" class="next page-number"><i class="fa fa-angle-double-left"></i></a></li>
+                                    <li><a href="?page={{ page_obj.next_page_number|translate_number }}" class="next page-number"><i class="fa fa-angle-double-left"></i></a></li>
                                 {% endif %}
 
                             </ul>

@@ -30,8 +30,12 @@ class ProductDetailView(DetailView):
     template_name = 'products/product_detail.html'
     context_object_name = 'product'
 
+
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        comments = self.object.comments.filter(active=True).order_by('-datetime_created')
+        context['comments'] = comments
         context['comment_form'] = CommentForm()
 
         return context
@@ -40,6 +44,7 @@ class ProductDetailView(DetailView):
 class CommentCreateView(LoginRequiredMixin,CreateView):
     model = Comment
     form_class = CommentForm
+
 
 
     def form_valid(self, form):
