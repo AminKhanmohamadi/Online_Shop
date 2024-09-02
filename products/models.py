@@ -4,6 +4,8 @@ from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
+from ckeditor.fields import RichTextField
+
 # Create your models here.
 
 class Category(models.Model):
@@ -19,7 +21,7 @@ class Product(models.Model):
     title = models.CharField(max_length=500 , verbose_name=_('Title'))
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name=_('Category') , related_name='categories' ,blank=True, null=True)
     short_description = models.CharField(max_length=100,verbose_name=_('Short Description') , blank=True)
-    description = models.TextField(verbose_name=_('Description'))
+    description = RichTextField(verbose_name=_('Description'))
     price = models.PositiveIntegerField(default=0 , verbose_name=_('Price'))
     active = models.BooleanField(default=True , verbose_name=_('Active'))
     image  = models.ImageField(upload_to='products/product_cover', verbose_name=_('Image') , blank=True)
