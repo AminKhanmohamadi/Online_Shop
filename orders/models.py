@@ -18,7 +18,7 @@ class Order(models.Model):
 
     address = models.CharField(max_length=700, verbose_name=_('Address'))
 
-    is_paid = models.BooleanField(default=False)
+    is_paid = models.BooleanField(default=False , verbose_name=_('Is Paid'))
 
     order_note = models.TextField(verbose_name=_('Description') , blank=True)
 

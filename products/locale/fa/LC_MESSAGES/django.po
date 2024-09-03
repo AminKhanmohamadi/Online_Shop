@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-02 17:37+0330\n"
+"POT-Creation-Date: 2024-09-03 14:37+0330\n"
 "PO-Revision-Date: 2024-09-02 17:38+0330\n"
 "Last-Translator:   <aminkhm097@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -120,11 +120,11 @@ msgstr "اضافه به سبد خرید"
 msgid "Product Description"
 msgstr "توضیحات محصول"
 
-#: .\products\templates\products\product_detail.html:151
+#: .\products\templates\products\product_detail.html:152
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\products\templates\products\product_detail.html:160
+#: .\products\templates\products\product_detail.html:161
 msgid "submit"
 msgstr "ارسال"
 
