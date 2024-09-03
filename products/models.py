@@ -14,6 +14,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = _('Category')
+        verbose_name_plural = _('Categories')
+
 
 
 
@@ -22,6 +26,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name=_('Category') , related_name='categories' ,blank=True, null=True)
     short_description = models.CharField(max_length=100,verbose_name=_('Short Description') , blank=True)
     description = RichTextField(verbose_name=_('Description'))
+    specialty = RichTextField(verbose_name=_('Specialty') , blank=True)
     price = models.PositiveIntegerField(default=0 , verbose_name=_('Price'))
     active = models.BooleanField(default=True , verbose_name=_('Active'))
     image  = models.ImageField(upload_to='products/product_cover', verbose_name=_('Image') , blank=True)

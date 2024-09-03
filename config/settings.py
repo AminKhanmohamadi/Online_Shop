@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig'
 
 ]
 
@@ -97,7 +98,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
+CKEDITOR_CONFIGS = {
+    "default": {
+        "versionCheck": False
+    }
+}
 
 # default settings (optional)
 JALALI_DATE_DEFAULTS = {

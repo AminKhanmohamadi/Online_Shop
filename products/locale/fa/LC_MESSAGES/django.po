@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-01 18:39+0330\n"
-"PO-Revision-Date: 2024-08-31 20:14+0330\n"
+"POT-Creation-Date: 2024-09-02 17:37+0330\n"
+"PO-Revision-Date: 2024-09-02 17:38+0330\n"
 "Last-Translator:   <aminkhm097@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,98 +18,119 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\products\models.py:8
-msgid "Title"
-msgstr "عنوان محصول"
+#: .\products\models.py:18 .\products\models.py:26
+msgid "Category"
+msgstr "دسته بندی "
 
-#: .\products\models.py:9
-msgid "Description"
-msgstr "توضیحات محصول"
-
-#: .\products\models.py:10
-msgid "Price"
-msgstr "قیمت"
-
-#: .\products\models.py:11
-msgid "Active"
-msgstr "فعال / غیرفعال"
-
-#: .\products\models.py:25
-msgid "Product"
-msgstr "محصول"
-
-#: .\products\models.py:26
-msgid "Products"
-msgstr "محصولات"
-
-#: .\products\models.py:39
-msgid "Very Bad"
-msgstr "خیلی بد"
-
-#: .\products\models.py:40
-msgid "Bad"
-msgstr "بد"
-
-#: .\products\models.py:41
-msgid "Normal"
-msgstr "عادی"
-
-#: .\products\models.py:42
-msgid "Good"
-msgstr "خوب"
-
-#: .\products\models.py:43
-msgid "Prefect"
-msgstr "بسیار خوب"
-
-#: .\products\models.py:49
-msgid "Comment Author"
-msgstr "نویسنده دیدگاه"
-
-#: .\products\models.py:50
-msgid "Comment Text"
-msgstr "متن دیدگاه"
-
-#: .\products\models.py:51
-msgid "Score"
-msgstr "امتیاز"
-
-#: .\products\models.py:67
-msgid "comment"
-msgstr "دیدگاه"
-
-#: .\products\models.py:68
-msgid "comments"
-msgstr "نظرات"
-
-#: .\products\templates\products\product_detail.html:19
-msgid "Product details of"
-msgstr "توضیحات محصول"
-
-#: .\products\templates\products\product_detail.html:42
-msgid "toman"
-msgstr "تومان"
-
-#: .\products\templates\products\product_detail.html:54
-msgid "Add To Cart"
-msgstr "اضافه به سبد خرید"
-
-#: .\products\templates\products\product_detail.html:62
+#: .\products\models.py:19
+#: .\products\templates\products\product_detail.html:58
 msgid "Categories"
 msgstr "دسته بندی ها"
 
-#: .\products\templates\products\product_detail.html:77
+#: .\products\models.py:25
+msgid "Title"
+msgstr "عنوان محصول"
+
+#: .\products\models.py:27
+msgid "Short Description"
+msgstr "توضیحات کوتاه"
+
+#: .\products\models.py:28
+msgid "Description"
+msgstr "توضیحات محصول"
+
+#: .\products\models.py:29
+msgid "Specialty"
+msgstr "ویژگی ها"
+
+#: .\products\models.py:30
+msgid "Price"
+msgstr "قیمت"
+
+#: .\products\models.py:31
+msgid "Active"
+msgstr "فعال / غیرفعال"
+
+#: .\products\models.py:32
+msgid "Image"
+msgstr "تصویر"
+
+#: .\products\models.py:33
+msgid "Slug"
+msgstr "متن در url"
+
+#: .\products\models.py:56
+msgid "Product"
+msgstr "محصول"
+
+#: .\products\models.py:57
+msgid "Products"
+msgstr "محصولات"
+
+#: .\products\models.py:70
+msgid "Very Bad"
+msgstr "خیلی بد"
+
+#: .\products\models.py:71
+msgid "Bad"
+msgstr "بد"
+
+#: .\products\models.py:72
+msgid "Normal"
+msgstr "عادی"
+
+#: .\products\models.py:73
+msgid "Good"
+msgstr "خوب"
+
+#: .\products\models.py:74
+msgid "Prefect"
+msgstr "بسیار خوب"
+
+#: .\products\models.py:80
+msgid "Comment Author"
+msgstr "نویسنده دیدگاه"
+
+#: .\products\models.py:81
+msgid "Comment Text"
+msgstr "متن دیدگاه"
+
+#: .\products\models.py:82
+msgid "Score"
+msgstr "امتیاز"
+
+#: .\products\models.py:98
+msgid "comment"
+msgstr "دیدگاه"
+
+#: .\products\models.py:99
+msgid "comments"
+msgstr "نظرات"
+
+#: .\products\templates\products\product_detail.html:38
+#: .\products\templates\products\products_list.html:59
+msgid "toman"
+msgstr "تومان"
+
+#: .\products\templates\products\product_detail.html:50
+msgid "Add To Cart"
+msgstr "اضافه به سبد خرید"
+
+#: .\products\templates\products\product_detail.html:71
 msgid "Product Description"
 msgstr "توضیحات محصول"
 
-#: .\products\templates\products\product_detail.html:163
+#: .\products\templates\products\product_detail.html:151
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\products\templates\products\product_detail.html:172
+#: .\products\templates\products\product_detail.html:160
 msgid "submit"
 msgstr "ارسال"
 
-#: .\products\views.py:51
+#: .\products\views.py:56
 msgid "Your comment has been added."
 msgstr "نظر شما با موفقیت ثبت شد."
+
+#~ msgid "Product details of"
+#~ msgstr "توضیحات محصول"
