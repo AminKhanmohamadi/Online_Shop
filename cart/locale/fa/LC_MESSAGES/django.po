@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-02 17:09+0330\n"
-"PO-Revision-Date: 2024-09-02 17:10+0330\n"
-"Last-Translator:   <aminkhm097@gmail.com>\n"
+"POT-Creation-Date: 2024-09-03 18:44+0330\n"
+"PO-Revision-Date: 2024-09-03 18:44+0330\n"
+"Last-Translator: امین خان محمدی <aminkhm097@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,29 +18,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\cart\templates\cart\cart.html:9
+#: .\templates\cart\cart.html:9
 msgid "Cart detail"
 msgstr "سبد خرید"
 
-#: .\cart\templates\cart\cart.html:51 .\cart\templates\cart\cart.html:68
-#: .\cart\templates\cart\cart.html:102 .\cart\templates\cart\cart.html:111
-#: .\cart\templates\cart\cart_sidebar.html:28
-#: .\cart\templates\cart\cart_sidebar.html:39
+#: .\templates\cart\cart.html:51 .\templates\cart\cart.html:68
+#: .\templates\cart\cart.html:115 .\templates\cart\cart.html:124
+#: .\templates\cart\cart_sidebar.html:28 .\templates\cart\cart_sidebar.html:39
 msgid "toman"
 msgstr "تومان"
 
-#: .\cart\templates\cart\cart.html:79
-msgid "Cart is Empty! please add some products to the cart"
-msgstr "سبد خرید خالی است! لطفا محصولی اضافه کنید"
-
-#: .\cart\templates\cart\cart.html:80
-msgid "Go Shoping"
-msgstr "برو به فروشگاه"
-
-#: .\cart\views.py:34
+#: .\views.py:34
 msgid "Successfully added to cart"
 msgstr "محصول با موفقیت به سبد خرید اضافه شد"
 
-#: .\cart\views.py:43
+#: .\views.py:43
 msgid "Successfully removed from cart"
 msgstr "محصول با موفقیت از سبد خرید حذف شد"
+
+#: .\views.py:52
+msgid "Successfully all removed from cart"
+msgstr "سبد خرید با موفقیت حذف شد"
+
+#: .\views.py:54
+msgid "Your cart is already empty"
+msgstr "سبد خرید شما از قبل خالی است"
+
+#~ msgid "Cart is Empty! please add some products to the cart"
+#~ msgstr "سبد خرید خالی است! لطفا محصولی اضافه کنید"
+
+#~ msgid "Go Shoping"
+#~ msgstr "برو به فروشگاه"

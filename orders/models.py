@@ -20,7 +20,7 @@ class Order(models.Model):
 
     is_paid = models.BooleanField(default=False , verbose_name=_('Is Paid'))
 
-    order_note = models.TextField(verbose_name=_('Description') , blank=True)
+    order_note = models.TextField(verbose_name=_('Order_note') , blank=True)
 
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
