@@ -10,12 +10,19 @@ from .forms import OrderForm
 # Create your views here.
 @login_required
 def order_create_view(request):
-    order_form = OrderForm()
+
+
     cart = Cart(request)
 
     if len(cart) == 0:
         messages.warning(request, _('There are no orders in your cart.'))
         return redirect('product-list')
+
+    initial_data = {
+        'first_name': request.user.first_name,
+        'last_name': request.user.last_name
+    }
+    order_form = OrderForm(request.POST or None, initial=initial_data)
 
     if request.method == 'POST':
         order_form = OrderForm(request.POST)
@@ -38,6 +45,7 @@ def order_create_view(request):
             request.user.last_name = order_obj.last_name
             request.user.save()
 
-            messages.success(request, _('Your order has been added.'))
+            request.session['order_id'] = order_obj.id
+            return redirect('payment:payment_process')
 
     return render(request, 'orders/order_create.html' , {'form': order_form} )

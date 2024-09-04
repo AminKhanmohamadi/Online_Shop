@@ -28,6 +28,7 @@ urlpatterns = [
     path('pages/', include('pages.urls')),
     path('accounts/', include('allauth.urls')),
     path('order/' , include('orders.urls')),
+    path('payment/' , include('payment.urls')),
 
 
     #     rosetta

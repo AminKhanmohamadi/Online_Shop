@@ -22,6 +22,10 @@ class Order(models.Model):
 
     order_note = models.TextField(verbose_name=_('Order_note') , blank=True)
 
+    zarinpal_authority = models.CharField(max_length=255 , verbose_name=_('Authority') , blank=True)
+    zarinpal_ref_id = models.CharField(max_length=255 , verbose_name=_('Ref_id') , blank=True)
+    zarinpal_data = models.TextField(verbose_name=_('zarinpal_data') , blank=True)
+
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
@@ -29,6 +33,12 @@ class Order(models.Model):
 
     def __str__(self):
         return f'Order {self.id} - {self.user} : {self.is_paid}'
+
+
+    def get_total_price(self):
+        return sum(item.quantity * item.price for item in self.items.all())
+
+
 
     class Meta:
         verbose_name = _('Order')
